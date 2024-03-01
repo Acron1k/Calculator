@@ -33,6 +33,9 @@
 	margin-top: 50px;
 	border: none;
 }
+.resultDisplay {
+	color: #49f1b3;
+}
 .buttonsBlock {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);

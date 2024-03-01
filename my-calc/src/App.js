@@ -8,6 +8,7 @@ export const App = () => {
 	const [operand2, setOperand2] = useState('');
 	const [operator, setOperator] = useState('');
 	const [display, setDisplay] = useState('0');
+	const [isResult, setIsResult] = useState(false);
 	const handleNumClick = (num) => {
 		if (operator === '') {
 			setOperand1(operand1 + num);
@@ -18,6 +19,17 @@ export const App = () => {
 		}
 	};
 	const handleOperationClick = (operation) => {
+		if (operation === '=') {
+			if (operand2 !== '') {
+				setDisplay(getResult());
+				setOperand1(getResult());
+				setOperand2('');
+				setOperator('');
+				setIsResult(true);
+			}
+		} else {
+			setIsResult(false);
+		}
 		if (operation === '+') {
 			if (operator !== '') {
 				setOperand1(getResult());
@@ -71,7 +83,7 @@ export const App = () => {
 						<input
 							type="text"
 							value={display}
-							className={styles.displayText}
+							className={`${styles.displayText} ${isResult ? styles.resultDisplay : ''}`}
 						></input>
 					</div>
 					<div className={styles.buttonsBlock}>
