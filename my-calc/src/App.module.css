@@ -1,0 +1,71 @@
+.app {
+	text-align: center;
+}
+.header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+.calcWindow {
+	height: 400px;
+	width: 300px;
+	background-color: black;
+	border-radius: 30px;
+}
+.display {
+	width: 100%;
+	height: 30%;
+	padding-right: 3%;
+	position: relative;
+}
+.displayText {
+	text-align: right;
+	width: 90%;
+	color: azure;
+	background-color: #000000;
+	font-size: 50px;
+	padding-right: 20px;
+	margin-top: 50px;
+	border: none;
+}
+.buttonsBlock {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	padding-left: 15px;
+}
+.numsButtons {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+}
+.operationsBtn {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 10px;
+}
+.buttonZero {
+	grid-column: span 3;
+	width: 200px;
+}
+.numberBtn {
+	color: rgb(0, 0, 0);
+}
+button {
+	padding: 5px;
+	font-size: 18px;
+	border: none;
+	cursor: pointer;
+	background-color: azure;
+	height: 60px;
+	width: 60px;
+	border-radius: 30px;
+}
+button:hover {
+	background-color: #ccc;
+}
